@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="mainContainer">
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#Podcast">Podcast</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="#Research">Research</a></li>
+                    <li><a href="#Clients">Clients</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="aboutMe">
+                <div class="aboutTab">
+                    <span>✣</span>
+                    <span>About Me</span>
+                </div>                
+
+                <img src="./assets/man.png" alt="Man" id="man">
+
+                <div class="manInfo">
+                    <div id="manLeft">
+                        <h1 id="name">
+                            <span>I'm,</span>
+                            <span>Jon</span>
+                            <span>Daniel</span>
+                        </h1>
+                        <p>Inquiry@johndaniel.design <i class="ri-mail-open-line"></i></p>
+                    </div>
+                    <div id="badge">
+                        <div id="badgeCenter"></div>
+
+                        <svg
+                            viewBox="0 0 100 100"
+                            xmlns="http://www.w3.org/2000/svg"
+                            id="badgeText"
+                        >
+                            <defs>
+                                <path
+                                    id="circlePath"
+                                    d="
+                                        M 50,50
+                                        m -35,0
+                                        a 35,35 0 1,1 70,0
+                                        a 35,35 0 1,1 -70,0
+                                    "
+                                />
+                            </defs>
+
+                            <text
+                                font-size="8"
+                                font-weight="700"
+                                letter-spacing="2"
+                                fill="white"
+                            >
+                                <textPath
+                                    href="#circlePath"
+                                    startOffset="50%"
+                                    text-anchor="middle"
+                                >
+                                    MY DESIGN PORTFOLIO • 2023 •
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio">
+                <h1>Portfolio</h1>
+
+                 <svg viewBox="0 0 25 35" fill="none">
+                    <path
+                        d="M6 6H18V18"
+                        stroke="currentColor"
+                        stroke-width="3.5"
+                        stroke-linecap="square"
+                    />
+                </svg>
+            </section>
+
+            <section id="bird" class="rounded">
+                <img src="./assets/bird.png" alt="">
+            </section>
+
+            <section id="stats" class="rounded">
+                <section id="stat1">
+                    <p class="textBig">251</p>
+                    <p class="textTwo">Projects</p>
+
+                     <svg class="cornerIcon" viewBox="0 0 25 25" fill="none">
+                        <path
+                            d="M6 6H18V18"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="square"
+                        />
+                    </svg>
+                </section>
+                <section id="stat2">
+                    <p class="textBig">156</p>
+                    <p class="textTwo">Awards</p>
+
+                     <svg class="cornerIcon" viewBox="0 0 25 25" fill="none">
+                        <path
+                            d="M6 6H18V18"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="square"
+                        />
+                    </svg>
+                </section>
+            </section>
+
+            <section id="clients" class="rounded">
+                <i class="ri-apple-fill"></i>
+                <p>Clients</p>
+
+                 <svg class="cornerIcon" viewBox="0 0 25 25" fill="none">
+                    <path
+                        d="M6 6H18V18"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="square"
+                    />
+                </svg>
+            </section>
+
+            <section id="awards" class="rounded">
+                <section id="ball">
+                    <img src="./assets/ball.png" alt="">
+                </section>
+                <section id="designAwards" class="rounded">
+                    <p class="textBig">172</p>
+                    <p class="textTwo">Global Design <br> Awards</p>
+
+                    <svg class="cornerIcon" viewBox="0 0 25 25" fill="none">
+                        <path
+                            d="M6 6H18V18"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="square"
+                        />
+                    </svg>
+                </section>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

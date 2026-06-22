@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica neue';
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: inter;
+    src: url("./assets/inter/Inter-ExtraBold.otf");
+}
+
+@font-face {
+    font-family: demo;
+    src: url("./assets/demo/Talina\ DEMO.otf");
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContainer{
+    display: flex;
+    gap: 1.7rem;
+}
+
+header{
+    display: flex;
+}
+
+nav{
+    margin-bottom: 2rem;
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+}
+
+nav > ul > li{
+    list-style: none;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav > ul{
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+/* Grid */
+main{
+    width: 90vw;
+    min-height: 45rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+    "about about portfolio portfolio portfolio"
+    "about about bird bird stats"
+    "about about bird bird stats"
+    "about about client awards awards"
+    "about about client awards awards"
+    "about about client awards awards"
+    "about about client awards awards"
+    "about about client awards awards";
+}
+
+main > section{
+    /* border: 1px solid brown; */
+}
+
+#aboutMe{
+    grid-area: about;
+    position: relative;
+}
+
+#portfolio{
+    grid-area: portfolio;
+}
+
+#portfolio > svg{
+    width: 100px;
+    position: absolute;
+    right: 0rem;
+    top: 0.1rem;
+}
+
+#bird{
+    grid-area: bird;
+}
+
+#stats{
+    grid-area: stats;
+}
+
+#clients{
+    grid-area: client;
+    position: relative;
+}
+
+#awards{
+    grid-area: awards;
+}
+
+/* Styles */
+#aboutMe{
+    background-color: #8184d2;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden; 
+}
+
+#aboutMe::before{
+    content:"";
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:230px;
+    height:50px;
+
+    background:#f5f5f5;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        75% 100%,
+        0 100%
+    );
+
+    z-index:1;
+}
+
+.aboutTab{
+    position:absolute;
+    top:0;
+    left:18px;
+
+    font-size: 1.8rem;
+    font-weight: 900;
+    background:none;
+    width:auto;
+    height:auto;
+
+    z-index:2;
+}
+
+.manInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#man{
+    width: 22rem;
+    align-self: flex-end;
+    margin-top: 3rem;
+}
+
+#portfolio > h1{
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 20px;
+    font-family: inter;
+    overflow: hidden; 
+    font-size: min(14vw, calc(85vh * 0.2)); 
+    white-space: nowrap;
+    line-height: 1.2;
+    margin-top: -1.6rem;
+}
+
+#name {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.95;
+}
+
+#manLeft > h1{
+    font-size: 5rem;
+    color: whitesmoke;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+#manLeft > p{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: whitesmoke;
+    letter-spacing: 1px;
+}
+
+/* Cricular Badge */
+#badge{
+    position: relative;
+    top: 5rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#badge::before{
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border: 1px solid #222;
+    border-radius: 50%;
+}
+
+#badgeCenter{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ffffff;
+    position: absolute;
+}
+
+#badge text{
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+#bird{
+    overflow: hidden;
+    border: 1px solid;
+}
+
+#bird > img{
+    width: 100%;
+    height: 100%;
+}
+
+#ball > img{
+    width: 7rem;
+}
+
+.rounded{
+    border-radius: 15px;
+}
+
+#stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    color: white;
+}   
+
+#stats > section{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#stat2{
+    background-color: #8e6fbe;
+}
+
+#stat1{
+    background-color: #a9d9d7;
+    color: black;
+}
+
+.textBig{
+    font-size: 4.5rem;
+    font-weight: 900;
+}
+
+#clients{
+    background-color: #585858;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap: 0.25rem;
+}
+
+#clients > i{
+    font-size: 3.5rem;
+}
+
+#awards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#ball{
+    background-color: black;
+    height: 100%;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+#designAwards{
+    background-color: #fec267;
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cornerIcon{
+    position: absolute;
+    height: 40px;
+    right: 1rem;
+    top: 1rem;
+}
+
+.textTwo{
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+    text-align: center;
+}

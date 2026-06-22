@@ -1,0 +1,341 @@
+@font-face {
+    font-family: astro;
+    src: url("./assets/astro-jack-font/AstrojackfreepersonaluseScript-1j2y2.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-primary: rgb(34, 34, 34);
+    --text-secondary: rgb(214, 214, 214);
+    --border-btm: rgb(138, 138, 138);
+    --img-radius-m: 25px;
+    --img-radius-s: 18px;
+}
+
+body{
+    padding: 1.5rem 4rem;
+}
+
+header{
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-btm);
+}
+
+#menuLinks{
+    display: flex;
+    gap: 2.5rem;
+}
+
+#menuLinks > li{
+    list-style: none;
+}
+
+#menuLinks > li > a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    font-weight: 900;
+}
+
+#logo{
+    font-weight: 900;
+}
+
+#menuActions{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.8rem;
+    align-items: center;
+}
+
+#cartIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #1e1e1e;
+    padding: 0.9rem;
+}
+
+#cartIcon > i{
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+}
+
+.gridLayout{
+    display: grid;
+    width: 98%;
+    height: 73rem;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    /* border: 2px solid; */
+}
+
+.gridLayout > *{
+    /* border: 3px solid seagreen; */
+}
+
+#imageHeader{
+    grid-column: 3/9;
+}
+
+#leftGrid{
+    grid-column: 1/3;
+    grid-row: 1/8;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 3rem;
+    align-items: start;
+}
+
+#rightGrid{
+    grid-column: 9/11;
+    grid-row: 1/8;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: end;
+}
+
+#roseFlower{
+    margin-top: 3rem;
+    width: 4.5rem;
+    margin-right: 1.5rem;
+}
+
+#redFlower{
+    align-self: flex-end;
+}
+
+#rightImg{
+    width: 15rem;
+    height: 15rem;
+}
+
+#rightImg > p{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-top: 1rem;
+}
+
+#explore{
+    width: 10rem;
+    height: 10rem;
+}
+
+#sunPop{
+    position: absolute;
+    width: 10rem;
+    left: 20rem;
+}
+
+#imgGrid{
+    height: 100%;
+    grid-column: 3/9;
+    grid-row: 2/8;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem 0;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+#star{
+    position: absolute;
+    width: 9rem;
+    top: -0.5rem;
+}
+
+
+#qoute{
+    grid-column: 1/3;
+    grid-row: 6/8;
+    align-self: center;
+}
+
+#qouteText{
+    grid-column: 1/9;
+    grid-row: 8/9;
+    width: 36%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: -4rem;
+    line-height: 2.3rem;
+}
+
+#footerRight{
+    grid-column: 9/11;
+}
+
+#footer{
+    grid-column: 1/11;
+    grid-row: 9/11;
+    margin-top: -15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#imageHeader > h1{
+    font-size: 4.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.gridFlower{
+    width: 6rem;
+}
+
+.gridFlower:nth-child(1){
+    align-self: flex-start;
+}
+
+.boyFrameM{
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: var(--img-radius-m);
+}
+
+.boyFrameS{
+    width: 15rem;
+    height: 11rem;
+    object-fit: cover;
+    border-radius: var(--img-radius-s);
+}
+
+.clothInfo{
+    padding: 1rem;
+}
+
+.clothInfo > span{
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.clothInfo > p{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+#centerImg{
+    border-radius: var(--img-radius-m);
+    width: 20rem;
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+
+#leftDiv, #rigthDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+#leftDiv{
+    grid-row: 1/3;
+    grid-column: 1/2;
+    align-self: center;
+}
+
+#rigthDiv{
+    grid-row: 1/3;
+    grid-column: 3/4;
+    align-self: center;
+}
+
+#qouteSign{
+    width: 3rem;
+}
+
+#sign{
+    font-family: astro;
+    font-size: 5rem;
+    text-decoration: #fad956 underline;
+}
+
+#lotus{
+    height: 6rem;
+}
+
+#strip{
+    width: 10rem;
+}
+
+.footText{
+    display: flex;
+    align-items: center;
+}
+
+.foorInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+}
+
+.footMain{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footPara{
+    display: flex;
+    align-items: center;
+}
+
+.foorInfo > p{
+    font-size: 1.2rem;
+}
+
+.footPara > p:nth-child(1){
+    font-size: 5rem;
+}
+
+.footPara > p:nth-child(2){
+    font-size: 2rem;
+}
+
+.footMain > button{
+    padding: 0.85rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+}
+
+#footer > button{
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 2px gray;
+}
+
